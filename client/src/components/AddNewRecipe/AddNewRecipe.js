@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import uniqid from 'uniqid';
 
 const AddRecipe = ({
     history
@@ -9,6 +10,7 @@ const AddRecipe = ({
 
         const db = firebase.firestore();
         const { name, recipe, imageURL, category, origin } = e.target;
+        console.log(e.target);
 
         db.collection("recipes").add({
             name: name.value,
@@ -16,6 +18,7 @@ const AddRecipe = ({
             imageURL: imageURL.value,
             category: category.value,
             origin: origin.value,
+            id: uniqid(),
         })
             .then((createdRecipe) => {
                 console.log("Recipe created");
