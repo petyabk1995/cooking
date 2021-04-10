@@ -1,0 +1,13 @@
+footer {
+    margin-top: auto;
+    text-align: center;
+    background: #cccccc;
+}
+
+footer p {
+    padding: 1rem 0;
+    font-weight: normal;
+    margin: 0rem;
+    color: #0f292f;
+    font-size: 0.7em;
+}

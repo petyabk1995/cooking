@@ -1,0 +1,109 @@
+nav.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: center;  
+    letter-spacing: 0.05rem;
+    /* background: #116466; */
+    background: #62a5a1;
+    padding: 0.8rem 1rem;
+    color: #ffffff;
+  }
+
+  #site-header > nav > section.navbar-dashboard > a{
+      list-style: none;
+      text-decoration: none;
+      align-self: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white;  
+  }
+  #site-header > nav > section.navbar-dashboard > form > input[type="text"],
+  #site-header > nav > section.navbar-anonymous > ul > li:nth-child(1) > a,
+  #site-header > nav > section.navbar-user > ul > li:nth-child(1),
+  #site-header > nav > section.navbar-dashboard > ul > li:nth-child(1) > a{
+      margin-right: 0.5rem;
+  
+  }
+  
+  
+  nav.navbar ul {
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin: 0;
+  }
+  nav.navbar ul li {
+    display: block;
+    list-style: none outside;
+    position: relative;
+  }
+  nav.navbar .navbar-dashboard ul li a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-weight: bold;
+    background: #8860d0;
+    color: rgb(255, 255, 255);
+  }
+  .button:hover,
+  nav.navbar ul li a:hover,
+  nav.navbar ul li:hover > a {
+    background: rgb(248, 215, 107);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+  .navbar-dashboard{
+      display: flex;
+      justify-content: space-between;    
+      width: 100vw;
+  }
+  .navbar .first-bar .third-bar{
+      display: flex;
+      align-items: center;
+  }
+  .navbar .first-bar {
+      padding-top: 0.5em;
+  }
+  .navbar .third-bar a{
+      color: white;
+      margin: 0rem;
+      font-size: 1.8em;
+      font: Helvetica;
+      text-shadow: 4px 4px 3px rgb(0,0,0,0.1);
+      font-style: italic;
+      font-weight: bold;
+      font-family: serif;
+      text-decoration: none;
+}
+  .navbar .first-bar a{
+      color: white;
+      margin-right: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+  }
+  .navbar .first-bar input{  
+      margin-right: 0.5rem;
+  }
+  /* #site-header > nav > section > div.first-bar > a:nth-child(1){
+      font-weight: bold;
+      font-size: 1.5rem;
+  } */
+  .navbar .first-bar form{
+      display: flex;
+      align-items: center;
+  }
+  .navbar .second-bar ul{
+      display: flex;
+      align-items: center;
+  }
+  .navbar .second-bar ul li{
+      margin-right: 0.5rem;
+  }
+  .navbar-anonymous ul{
+      display: flex;
+  }

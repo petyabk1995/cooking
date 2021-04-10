@@ -1,0 +1,24 @@
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+.column {
+    flex: 25%;
+    max-width: 33.3%;
+    padding: 5% 1% 1% 1%;
+  }
+
+.basic div img {
+    height: 200px;;
+}
+
+.basic {
+  background: linear-gradient(rgba(250, 248, 248, 0.2), rgba(25, 167, 173, 0.2));
+  background-size: cover;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
