@@ -1,4 +1,3 @@
-// import * as petsService from '../../services/petsService';
 import firebase from 'firebase';
 
 const AddRecipe = ({
@@ -16,11 +15,11 @@ const AddRecipe = ({
             recipe: recipe.value,
             imageURL: imageURL.value,
             category: category.value,
-            origin: origin.value
+            origin: origin.value,
         })
-            .then((addRecipe) => {
+            .then((createdRecipe) => {
                 console.log("Recipe created");
-                history.push('/')
+                history.push('/cookbook')
 
             })
             .catch((error) => {
@@ -32,7 +31,7 @@ const AddRecipe = ({
         <section className="create">
             <form onSubmit={onCreatePetSubmitHandler}>
                 <fieldset>
-                    <legend>Add new Pet</legend>
+                    <legend>Add New Recipe</legend>
                     <p className="field">
                         <label htmlFor="name">Name</label>
                         <span className="input">
@@ -74,7 +73,7 @@ const AddRecipe = ({
                             <span className="actions"></span>
                         </span>
                     </p>
-                    <input className="button submit" type="submit" value="Add Pet" />
+                    <input className="button submit" type="submit" value="Add Recipe" />
                 </fieldset>
             </form>
 
