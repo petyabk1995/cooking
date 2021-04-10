@@ -17,14 +17,23 @@ const Header = ({
                     </div>
                     <div className="first-bar">
                         <Link to="/cookbook">cookbook</Link>
-                        {/* <a href="#">My recipes</a> */}
-                        <Link to="#">add New recipe</Link>
+                        {isAuthenticated
+                            ? <Link to="#">My recipes</Link>
+
+                            : <span></span>
+
+                        }
+                        {isAuthenticated
+                            ? <Link to="/add-new-recipe">add New recipe</Link>
+
+                            : <span></span>
+                        }
                     </div>
                     <div className="second-bar">
                         <ul>
                             {isAuthenticated
                                 ? <li>Welcome, {email}!</li>
-                                : <li>Welcome!</li>
+                                : <li></li>
                             }
                             {isAuthenticated
                                 ? <li><Link to="/logout"><i className="fas fa-sign-out-alt"></i> Logout</Link></li>
@@ -34,8 +43,8 @@ const Header = ({
                             }
 
                             {isAuthenticated
-                            ? <li></li>
-                            : <li>
+                                ? <li></li>
+                                : <li>
                                     <Link id="login" to="/login"><i className="fas fa-sign-in-alt"></i> Login</Link>
                                 </li>
                             }

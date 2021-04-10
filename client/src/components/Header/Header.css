@@ -44,11 +44,9 @@ nav.navbar {
     border-radius: 0.4rem;
     text-decoration: none;
     font-weight: bold;
-    background: #8860d0;
+    background: deeppink;
     color: rgb(255, 255, 255);
   }
-
-  
 
   .button:hover,
   nav.navbar ul li a:hover,
@@ -83,7 +81,8 @@ nav.navbar {
 }
   .navbar .first-bar a{
       color: white;
-      margin-right: 2rem;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
