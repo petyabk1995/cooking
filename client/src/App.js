@@ -17,6 +17,8 @@ import EditRecipe from './components/EditRecipe/EditRecipe';
 
 import { useState, useEffect } from 'react';
 
+const db = firebase.firestore();
+
 function App() {
 
     const [user, setUser] = useState(null);
@@ -46,6 +48,22 @@ function App() {
                     <Route path="/add-new-recipe" component={AddNewRecipe} />
                     <Route path="/recipe/:recipeId" exact component={RecipeDetails} />
                     <Route path="/recipe/:recipeId/edit" component={EditRecipe} />
+                    <Route path="/recipe/:recipeId/delete" render={props => {
+
+                        const recipeId = props.match.params.recipeId;
+                        const history = props.history;
+
+                        db.collection("recipes")
+                            .doc(recipeId)
+                            .delete()
+                            .then(() => {
+                                console.log("Document successfully deleted!");
+                                history.push('/cookbook');
+                            }).catch((error) => {
+                                console.error("Error removing document: ", error);
+                            });
+                    }} >
+                    </Route>
                 </Switch>
             </main>
             <Footer />
