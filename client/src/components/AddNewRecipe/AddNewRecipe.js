@@ -18,7 +18,7 @@ const AddRecipe = ({
             imageURL: imageURL.value,
             category: category.value,
             origin: origin.value,
-            id: uniqid(),
+            // id: uniqid(),
         })
             .then((createdRecipe) => {
                 console.log("Recipe created");

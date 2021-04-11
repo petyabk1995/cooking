@@ -24,8 +24,12 @@ class Cookbook extends Component {
             .then((res) => {
                 let allRecipes = [];
                 res.forEach((recipe) => {
-                    allRecipes.push(recipe.data());
-                    console.log(recipe.id)
+                    allRecipes.push({
+                        id: recipe.id,
+                        ...recipe.data()
+                    });
+                    console.log(recipe.id);
+                    console.log(allRecipes);
                     this.setState({ recipes: allRecipes });
                 });
             });
