@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import Cookbook from './components/Cookbook/Cookbook';
 import AddNewRecipe from './components/AddNewRecipe/AddNewRecipe';
 import RecipeDetails from './components/RecipeDetails/RecipeDetails';
+import EditRecipe from './components/EditRecipe/EditRecipe';
 
 import { useState, useEffect } from 'react';
 
@@ -43,7 +44,8 @@ function App() {
                     />
                     <Route path="/cookbook" component={Cookbook} />
                     <Route path="/add-new-recipe" component={AddNewRecipe} />
-                    <Route path="/recipe/:recipeId" component={RecipeDetails} />
+                    <Route path="/recipe/:recipeId" exact component={RecipeDetails} />
+                    <Route path="/recipe/:recipeId/edit" component={EditRecipe} />
                 </Switch>
             </main>
             <Footer />

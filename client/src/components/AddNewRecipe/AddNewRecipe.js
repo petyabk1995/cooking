@@ -9,7 +9,7 @@ const AddRecipe = ({
         e.preventDefault();
 
         const db = firebase.firestore();
-        const { name, recipe, imageURL, category, origin } = e.target;
+        const { name, recipe, imageURL, category, origin, likes } = e.target;
         console.log(e.target);
 
         db.collection("recipes").add({
@@ -18,6 +18,7 @@ const AddRecipe = ({
             imageURL: imageURL.value,
             category: category.value,
             origin: origin.value,
+            likes: 0,
             // id: uniqid(),
         })
             .then((createdRecipe) => {
@@ -53,7 +54,7 @@ const AddRecipe = ({
                         <label htmlFor="description">Recipe</label>
                         <span className="input">
                             <textarea rows="4" cols="45" type="text" name="recipe" id="description"
-                                placeholder="Description"></textarea>
+                                placeholder="Recipe"></textarea>
                             <span className="actions"></span>
                         </span>
                     </p>
