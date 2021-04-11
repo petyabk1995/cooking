@@ -70,7 +70,7 @@ class Cookbook extends Component {
                             recipe={x.recipe}
                             imageURL={x.imageURL}
                             category={x.category}
-                            />
+                        />
                     )
                     };
                 </ul>
