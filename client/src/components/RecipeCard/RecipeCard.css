@@ -1,3 +1,8 @@
 .otherPet .img img {
     height: 170px;
 }
+
+#likes {
+    margin-bottom: 1rem;
+    margin-top:0;
+}

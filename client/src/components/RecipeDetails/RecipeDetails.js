@@ -29,20 +29,37 @@ const RecipeDetails = ({
             });
     }, []);
 
-    const onPetButtonClickHandler = () => {
-        //need to finish likes 
+    const onPetButtonClickHandler = (e) => {
+        let increasedLikes = recipe.likes + 1;
+        console.log(e.target)
+        
+        db.collection("recipes")
+            .doc(recipeId)
+            .set({
+                recipe: recipe.recipe,
+                name: recipe.name,
+                origin: recipe.origin,
+                imageURL: recipe.imageURL,
+                category: recipe.category,
+                likes: Number(increasedLikes),
+                id: recipeId
+            })
+            .then(() => {
+                console.log('Like added');
+                history.push(`/recipe/${recipeId}`)
+            })
 
     }
-    
+
     return (
         <section className="detailsOtherPet">
             <h3>{recipe.name}</h3>
-            <p>Likes: {recipe.likes}
+            <p>
 
-                <button className="button" onClick={onPetButtonClickHandler}>
+                <button id="likeButton" className="button" onClick={onPetButtonClickHandler}>
                     <i className="fas fa-heart"></i>
-                    Like
-            </button>
+                    Like me
+                </button>
 
             </p>
             <p className="img"><img src={recipe.imageURL} /></p>

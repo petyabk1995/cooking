@@ -9,6 +9,7 @@ const Recipe = ({
     imageURL,
     recipe,
     key,
+    likes
 }) => {
 
     return (
@@ -19,6 +20,8 @@ const Recipe = ({
             <div className="pet-info">
                 <Link to={`/recipe/${id}`} ><button className="button">Recipe</button></Link>
             </div>
+            <p id="likes">{likes} people have liked the recipe!</p>
+
         </li>
     )
 }
