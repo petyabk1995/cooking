@@ -32,7 +32,7 @@ const RecipeDetails = ({
     const onPetButtonClickHandler = (e) => {
         let increasedLikes = recipe.likes + 1;
         console.log(e.target)
-        
+
         db.collection("recipes")
             .doc(recipeId)
             .set({
@@ -64,10 +64,15 @@ const RecipeDetails = ({
             </p>
             <p className="img"><img src={recipe.imageURL} /></p>
             <p className="description">{recipe.recipe}</p>
-            <div class="pet-info">
-                <Link to={`/recipe/${recipe.id}/edit`}><button className="button">Edit</button></Link>
-                <Link to={`/recipe/${recipe.id}/delete`}><button className="button" >Delete</button></Link>
-            </div>
+            
+                <div class="pet-info">
+                    <Link to={`/recipe/${recipe.id}/edit`}><button className="button">Edit</button></Link>
+
+                    <Link to={`/recipe/${recipe.id}/delete`}><button className="button" >Delete</button></Link>
+                </div>
+
+            
+
         </section>
     )
 }

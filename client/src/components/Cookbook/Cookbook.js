@@ -13,7 +13,7 @@ class Cookbook extends Component {
 
         this.state = {
             recipes: [],
-            currentRecipe: 'all'
+            currentRecipe: 'all',
         }
     }
 
@@ -73,7 +73,7 @@ class Cookbook extends Component {
                             likes={x.likes}
                         />
                     )
-                    };
+                    }
                 </ul>
             </section>
         )

@@ -1,5 +1,35 @@
+## Guest Home page
+    - Guests have access to:
+            -> main page
+            -> all recipes
+            -> recipe details
+    - Guests can: 
+        -> register
+        -> login
+
+## Logged in users
+    - Logged in users have access to:
+            -> main page
+            -> all recipes
+            -> recipe details
+    - Logged in users can: 
+        -> View greeting (i.e. Welcome, emailOfTheUser)
+        -> Create new recipes (DB Firebase)
+        -> Edit recipes
+        -> Delete recipes
+        -> Logout
+
+
+
+
+
+
+
+
+
+
+
 Need to finish: 
-    Add likes   
     Show recipes by category
     Add userId to the recipe fields 
     Set "Edit" and "Delete" to show only if the user has created that recipe

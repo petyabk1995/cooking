@@ -46,7 +46,7 @@ function App() {
                     />
                     <Route path="/cookbook" component={Cookbook} />
                     <Route path="/add-new-recipe" component={AddNewRecipe} />
-                    <Route path="/recipe/:recipeId" exact component={RecipeDetails} />
+                    <Route path="/recipe/:recipeId" exact component={RecipeDetails} {...authInfo} />
                     <Route path="/recipe/:recipeId/edit" component={EditRecipe} />
                     <Route path="/recipe/:recipeId/delete" render={props => {
 
